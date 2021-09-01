@@ -64,7 +64,8 @@ To Visit App:
 
 Install global dependencies
 
-`npm i -g sequelize`
+`npm install -g sequelize-cli`
+`npm install -g mariadb` 
 `sequelize db:migrate`
 
 Installation of dependencies:
