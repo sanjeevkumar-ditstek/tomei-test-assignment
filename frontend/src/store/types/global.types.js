@@ -1,0 +1,1 @@
+export const STORE_GLOBAL_CODES = "STORE_GLOBAL_CODES";

@@ -1,0 +1,106 @@
+.stepper {
+    .stepperLogo {
+      text-align: center;
+      margin: 0 0 30px;
+    }
+    .stepperHead {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      @media (max-width: 767px) {
+        display: block;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        left: 54px;
+        top: 35px;
+        right: 50px;
+        height: 3px;
+        background-color: #006bce;
+        z-index: -1;
+        @media (max-width: 767px) {
+          left: 20px;
+          top: 35px;
+          bottom: 30px;
+          background-color: #006bce;
+          height: auto;
+          right: initial;
+          width: 1px;
+        }
+      }
+      .span {
+        flex: 1;
+      }
+      .step {
+        position: static;
+        &.active {
+          .stepTitle {
+            .circle {
+              background-color: #cde7ff;
+              cursor: default;
+            }
+            .desc {
+              .count,
+              .title {
+                color: #006bce;
+              }
+            }
+          }
+        }
+        .stepTitle {
+          text-align: center;
+          @media (max-width: 767px) {
+            display: flex;
+            text-align: left;
+            padding: 20px 0;
+            align-items: center;
+          }
+          .circle {
+            border: 1px solid #006bce;
+            min-width: 70px;
+            max-width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+            font-family: "open_sansbold";
+            color: #006bce;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            cursor: pointer;
+            @media (max-width: 767px) {
+              margin: 0 10px 0 0;
+              min-width: 40px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 22px;
+            }
+          }
+          .desc {
+            .count {
+              font-family: "open_sansbold";
+              font-size: 16px;
+              text-transform: uppercase;
+              color: #54555c;
+              margin: 0 0 10px;
+              @media (max-width: 767px) {
+                font-size: 13px;
+                margin: 0;
+              }
+            }
+            .title {
+              font-size: 16px;
+              text-transform: uppercase;
+              font-family: "open_sanssemibold";
+              color: #6a6a70;
+              @media (max-width: 767px) {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
